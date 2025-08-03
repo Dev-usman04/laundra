@@ -1,9 +1,9 @@
 import React from 'react';
 import Header from './components/Header';
 import ProgressBar from './components/ProgressBar';
-import ServiceSelection from './components/steps/ServiceSelection';
 import ScheduleStep from './components/steps/ScheduleStep';
-import PricingStep from './components/steps/PricingStep';
+import ServiceSelection from "./components/steps/ServiceSelection";
+import PricingStep from './components/steps/PricingStep'; 
 import ConfirmationStep from './components/steps/ConfirmationStep';
 import AnimatedStep from './components/AnimatedStep';
 import { useBookingState } from './hooks/useBookingState';

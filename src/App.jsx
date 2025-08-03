@@ -1,13 +1,13 @@
-import React from 'react';
-import Header from './components/Header';
-import ProgressBar from './components/ProgressBar';
-import ScheduleStep from './components/steps/ScheduleStep';
-import ServiceSelection from "./components/steps/ServiceSelection";
-import PricingStep from './components/steps/PricingStep'; 
-import ConfirmationStep from './components/steps/ConfirmationStep';
-import AnimatedStep from './components/AnimatedStep';
-import { useBookingState } from './hooks/useBookingState';
-import { ArrowRight } from 'lucide-react';
+import React from "react";
+import Header from "./components/Header";
+import ProgressBar from "./components/ProgressBar";
+import ScheduleStep from "./components/steps/ScheduleStep";
+import PricingStep from "./components/steps/PricingStep";
+import ConfirmationStep from "./components/steps/ConfirmationStep";
+import AnimatedStep from "./components/AnimatedStep";
+import { ServiceSelection } from "./components/steps/ServiceSelection";
+import { useBookingState } from "./hooks/useBookingState";
+import { ArrowRight } from "lucide-react";
 
 const App = () => {
   const {
@@ -29,15 +29,15 @@ const App = () => {
     setItemCount,
     calculateTotal,
     canProceed,
-    resetBooking
+    resetBooking,
   } = useBookingState();
 
   const nextStep = () => {
-    setCurrentStep(prev => Math.min(prev + 1, 4));
+    setCurrentStep((prev) => Math.min(prev + 1, 4));
   };
 
   const prevStep = () => {
-    setCurrentStep(prev => Math.max(prev - 1, 1));
+    setCurrentStep((prev) => Math.max(prev - 1, 1));
   };
 
   return (
@@ -114,8 +114,8 @@ const App = () => {
               disabled={currentStep === 1}
               className={`px-8 py-3 rounded-xl font-semibold transition-all transform hover:scale-105 ${
                 currentStep === 1
-                  ? 'bg-gray-200 text-gray-400 cursor-not-allowed'
-                  : 'bg-white text-gray-700 border-2 border-gray-200 hover:border-purple-300 hover:shadow-md'
+                  ? "bg-gray-200 text-gray-400 cursor-not-allowed"
+                  : "bg-white text-gray-700 border-2 border-gray-200 hover:border-purple-300 hover:shadow-md"
               }`}
             >
               Previous
@@ -125,8 +125,8 @@ const App = () => {
               disabled={!canProceed()}
               className={`px-8 py-3 rounded-xl font-semibold transition-all transform hover:scale-105 flex items-center space-x-2 ${
                 canProceed()
-                  ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white shadow-lg hover:shadow-xl'
-                  : 'bg-gray-200 text-gray-400 cursor-not-allowed'
+                  ? "bg-gradient-to-r from-purple-500 to-pink-500 text-white shadow-lg hover:shadow-xl"
+                  : "bg-gray-200 text-gray-400 cursor-not-allowed"
               }`}
             >
               <span>Next</span>

@@ -2,7 +2,7 @@ import React from 'react';
 import ServiceCard from '../ServiceCard';
 import { services } from '../../data/services';
 
-const ServiceSelection = ({ selectedService, setSelectedService }) => {
+export const ServiceSelection = ({ selectedService, setSelectedService }) => {
   return (
     <div className="space-y-6">
       <h2 className="text-2xl font-bold text-gray-800 text-center mb-8">
@@ -23,5 +23,3 @@ const ServiceSelection = ({ selectedService, setSelectedService }) => {
     </div>
   );
 };
-
-export default ServiceSelection;

@@ -1,6 +1,6 @@
-import React from 'react';
-import ServiceCard from '../ServiceCard';
-import { services } from '../../data/services';
+import React from "react";
+import ServiceCard from "../ServiceCard";
+import { services } from "../../data/services";
 
 export const ServiceSelection = ({ selectedService, setSelectedService }) => {
   return (

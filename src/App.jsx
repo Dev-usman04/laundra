@@ -5,7 +5,7 @@ import ScheduleStep from "./components/steps/ScheduleStep";
 import PricingStep from "./components/steps/PricingStep";
 import ConfirmationStep from "./components/steps/ConfirmationStep";
 import AnimatedStep from "./components/AnimatedStep";
-import { ServiceSelection } from "./components/steps/ServiceSelection.jsx";
+import { ServiceSelection } from "./components/steps/ServiceSelection";
 import { useBookingState } from "./hooks/useBookingState";
 import { ArrowRight } from "lucide-react";
 
